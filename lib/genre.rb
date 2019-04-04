@@ -15,8 +15,4 @@ class Genre
   def albums
     @albums
   end
-
-  def artists
-    albums.collect {|a| a.artist}.uniq
-  end
 end

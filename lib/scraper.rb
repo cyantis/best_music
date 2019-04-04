@@ -1,7 +1,6 @@
 require 'open-uri'
 require 'nokogiri'
 require 'pry'
-#require_relative './environment.rb'
 require_relative './album.rb'
 
 #newest_album_url = https://pitchfork.com/best/
@@ -14,7 +13,8 @@ class Scraper
   end
 
   def self.newest_album
-    new_album = scrape_pitchfork.css(".bnm-hero__review-block")[0]
+    new_album = scrape_pitchfork.css(".fragment-list").css(".review")[0]
+    #or scrape_pitchfork.css(".bnm-hero__review-block")[0]
   end
 
   def self.album_list
