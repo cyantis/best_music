@@ -1,7 +1,8 @@
 require 'open-uri'
 require 'nokogiri'
 require 'pry'
-require_relative './environment.rb'
+#require_relative './environment.rb'
+require_relative './album.rb'
 
 #newest_album_url = https://pitchfork.com/best/
 #album_list_url = https://pitchfork.com/reviews/best/albums/
