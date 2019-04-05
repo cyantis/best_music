@@ -20,15 +20,20 @@ class Scraper
       Album.new(album, artist, genre, url)
       Genre.new(genre)
     end
-    binding.pry
   end
 
   def self.album_score
-    Album.all.each {|a| a.rating = scrape_pitchfork('https://pitchfork.com#{a.url}').css(".score").text.to_f}
+    Album.all.each do |a|
+      url = "https://pitchfork.com#{a.url}"
+      a.rating = scrape_pitchfork(url).css(".score").text.to_f
+    end
   end
 
-  def self.album_description(index_url)
-    description = scrape_pitchfork(index_url).css(".review-detail__abstract").text
+  def self.album_description
+    Album.all.each do |a|
+      url = "https://pitchfork.com#{a.url}"
+      a.description = scrape_pitchfork(url).css(".review-detail__abstract").text
+    end
   end
 end
 

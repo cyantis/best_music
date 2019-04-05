@@ -10,7 +10,7 @@ class Album
     @artist = artist
     @genre = genre
     @url = url
-    #genre.albums << self if !genre.albums.include?(self)
+    #--> start here: genre.albums << self if !genre.albums.include?(self)
     self.class.all << self
   end
 
