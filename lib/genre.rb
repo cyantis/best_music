@@ -6,6 +6,7 @@ class Genre
   def initialize(name)
     @name = name
     @albums = []
+    self.class.all << self
   end
 
   def self.all
@@ -15,4 +16,5 @@ class Genre
   def albums
     @albums
   end
+
 end
