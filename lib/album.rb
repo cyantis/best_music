@@ -19,7 +19,7 @@ class Album
  end
 
  def rating=(rating)
-   @rating = rating.to_i
+   @rating = rating
  end
 
  def self.albums_by_rating

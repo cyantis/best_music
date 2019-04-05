@@ -3,29 +3,37 @@ require 'nokogiri'
 require 'pry'
 require_relative './album.rb'
 
-#newest_album_url = https://pitchfork.com/best/
 #album_list_url = https://pitchfork.com/reviews/best/albums/
 
 class Scraper
 
   def self.scrape_pitchfork(index_url)
       index = Nokogiri::HTML(open(index_url))
+      binding.pry
   end
 
-  def self.newest_album
-    new_album = scrape_pitchfork.css(".fragment-list").css(".review")[0]
-    #or scrape_pitchfork.css(".bnm-hero__review-block")[0]
+  def self.newest_album(index_url)
+    new_album = scrape_pitchfork(index_url).css(".fragment-list").css(".review")[0]
+    #artist_name = new_album.css("li")[0].text
+    #genre = new_album.css("li")[1].text
+    #review_url = new_album.css("a").attr("href").value
+    #album_title = new_album.css(".review__title-album").text
+
   end
 
-  def self.album_list
-    a_list = scrape_pitchfork.css(".fragment-list").css(".review")[0,1,2...]
+  def self.album_list(index_url)
+    a_list = scrape_pitchfork(index_url).css(".fragment-list").css(".review")
+    #a_list.collect {|a| a.text}
+    #artist_name = new_album.css("li")[0].text
+    #genre = new_album.css("li")[1].text
+    #review_url = new_album.css("a").attr("href").value
+    #album_title = new_album.css(".review__title-album").text
+  end
+
+  def self.album_score(index_url)
+    score = scrape_pitchfork(index_url).css(".score").text.to_f
   end
 
 end
 
-#scrape_pitchfork('https://pitchfork.com/reviews/best/albums/')
-
-
-#track = index.css(".bnm-hero__review-block")[1]
-#reissue = index.css(".bnm-hero__review-block")[2].text
-#album_link - index.css(".bnm-hero__review-block a").attr("href").value
+Scraper.scrape_pitchfork('https://pitchfork.com/reviews/albums/weyes-blood-titanic-rising/')
