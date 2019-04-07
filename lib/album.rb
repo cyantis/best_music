@@ -10,7 +10,7 @@ class Album
     @artist = artist
     @genre = genre
     @url = url
-    #--> start here: genre.albums << self if !genre.albums.include?(self)
+    Genre.all.each {|g| g.albums << self if g.name == genre}
     self.class.all << self
   end
 
@@ -19,6 +19,6 @@ class Album
   end
 
  def self.albums_by_rating
-   all.collect {|a| a.rating}.sort
+   all.sort_by {|a| a.rating}.reverse
  end
 end
