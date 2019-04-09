@@ -12,7 +12,7 @@ module BestMusic
       Scraper.album_score
       Scraper.album_description
       puts "The 'Album of the Week' is:"
-      puts "*#{Album.all[0].name}* by #{Album.all[0].artist}".colorize( :background => :red)
+      puts "*#{Album.all[0].name}* by #{Album.all[0].artist}".colorize(:background => :red)
       puts "It has a score of #{Album.all[0].rating}".yellow
       puts "Pitchfork says: '#{Album.all[0].description}'"
       puts "To read the full review and/or to learn more visit:"
@@ -60,7 +60,7 @@ module BestMusic
       Genre.all.each do |g|
         puts "// #{g.name} //".upcase.yellow
         g.albums.each do |a|
-          puts "*#{a.name}* by #{a.artist}".colorize( :background => :red)
+          puts "*#{a.name}* by #{a.artist}".colorize(:background => :red)
           puts "It has a score of #{a.rating}".yellow
           puts "Pitchfork says: '#{a.description}'"
           puts "To read the full review and/or to learn more visit:"
@@ -72,7 +72,7 @@ module BestMusic
 
     def albums_by_rating
       Album.albums_by_rating.each do |a|
-        puts "*#{a.name}* by #{a.artist}".colorize( :background => :red)
+        puts "*#{a.name}* by #{a.artist}".colorize(:background => :red)
         puts "It has a score of #{a.rating}".yellow
         puts "Pitchfork says: '#{a.description}'"
         puts "To read the full review and/or to learn more visit:"

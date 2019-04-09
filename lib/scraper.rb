@@ -17,8 +17,8 @@ class Scraper
       artist = a.css("li")[0].text
       genre = a.css("li")[1].text
       url = a.css("a").attr("href").value
-      Album.new(album, artist, genre, url) if !Album.all.collect {|a| a.name}.include?(album)
       Genre.new(genre) if !Genre.all.collect {|g| g.name}.include?(genre)
+      Album.new(album, artist, genre, url) if !Album.all.collect {|a| a.name}.include?(album)
     end
   end
 
