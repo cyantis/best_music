@@ -2,8 +2,9 @@ source "https://rubygems.org"
 
 gem 'pry'
 gem 'nokogiri', '~> 1.8.5'
+gem 'colorize'
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+#git_source(:github) {|| "https://github.com/#{repo_name}" }
 
 # Specify your gem's dependencies in best_music.gemspec
-gemspec
+#gemspec
