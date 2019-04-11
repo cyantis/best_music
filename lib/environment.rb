@@ -13,7 +13,7 @@ module BestMusic
       Scraper.album_score
       Scraper.album_description
 
-      puts "The 'Album of the Week' is:"
+      puts "The 'Best New Album' is:"
       puts "*#{Album.all[0].name}* by #{Album.all[0].artist}".colorize(:background => :red)
       puts "It has a score of #{Album.all[0].rating}".yellow
       puts "Pitchfork says: \"#{Album.all[0].description}\""
@@ -44,9 +44,9 @@ module BestMusic
     end
 
     def album_list
-      puts "Below are the 'Albums of the Week' for the past 12 weeks."
+      puts "Below are the 'Best New Albums' for the past 12 weeks."
       Album.all.each do |a|
-        puts "*#{a.name}* by #{a.artist}".colorize( :background => :red)
+        puts "*#{a.name}* by #{a.artist}".colorize(:background => :red)
         puts "It has a score of #{a.rating}".yellow
         puts "Pitchfork says: \"#{a.description}\""
         puts "To read the full review and/or to learn more visit:"
@@ -81,7 +81,7 @@ module BestMusic
     end
 
     def instructions
-      puts "To list all recent 'Albums of the Week,' type 'list'."
+      puts "To list all recent 'Best New Albums,' type 'list'."
       puts "To browse by genre, type 'genre'."
       puts "To browse by album score, type 'score'."
       puts "To quit, type 'exit'."
