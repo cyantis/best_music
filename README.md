@@ -1,6 +1,6 @@
 # Best Music
 
-_Best Music_ is a CLI app that returns Pitchfork.com's _Best New Albums_ in realtime. It also allows easy browsability by genre and score and provides a brief album description and link to the full review online.
+_Best Music_ is a CLI app that returns Pitchfork.com's _Best New Albums_ in realtime. It allows easy browsability by genre and score and provides a brief album description and link to the full review online.
 
 ## Installation
 
