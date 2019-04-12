@@ -20,19 +20,19 @@ Or install it yourself as:
 
     $ gem install best_music
 
-You can also clone or download the repo from GitHub (https://github.com/cyantis/best_music "here").
+You can also clone or download the repo from GitHub: https://github.com/cyantis/best_music
 
 Once you've installed/cloned/downloaded the Gem, run `bin/setup` to install dependencies.
 
 ## Usage
 
-To launch _Best Music_, simply run `bin/best-music`. The app returns live data from more than a dozen webpages, so it may take a few seconds to launch. Thanks for your patience!
+To launch _BestMusic_, simply run `bin/best-music`. The app returns live data from more than a dozen webpages, so it may take a few seconds to launch. Thanks for your patience!
 
-Once _Best Music_ has loaded, you will have access to this week's _Best New Album_ along with a number of options for browsing the past 12 weeks' worth of _Best New Albums_. You can:
+Once _BestMusic_ has loaded, you will have access to this week's _Best New Album_ along with a number of options for browsing the past 12 weeks' worth of _Best New Albums_. You can:
 
 1. Browse through a list of previous best albums by typing `list`.
-2. Explore the best recent albums by genre. Just type `genre`.
-3. Check out the highest scoring albums by typing `score`.
+2. Explore the best albums by genre. Just type `genre`.
+3. Type `score` to check out the highest scoring albums.
 
 If at any point you need a refresher on your options, simply type `help` to access a list of instructions.
 
