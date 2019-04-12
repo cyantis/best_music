@@ -2,8 +2,6 @@
 
 BestMusic is a CLI app that returns Pitchfork.com's _Best New Albums_ in realtime. It also allows easy browsability by genre and score and provides a brief album description and link to the full review online.
 
-_This app is presently under construction. Check back for updates and the official launch notification!_
-
 ## Installation
 
 Add this line to your application's Gemfile:
