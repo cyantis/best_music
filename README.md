@@ -1,6 +1,6 @@
 # BestMusic
 
-BestMusic is a CLI app that returns Pitchfork.com's _Best New Albums_ in realtime. It also allows easy browsability by genre and score and provides a brief album description and link to the full review online.
+*BestMusic* is a CLI app that returns Pitchfork.com's _Best New Albums_ in realtime. It also allows easy browsability by genre and score and provides a brief album description and link to the full review online.
 
 ## Installation
 
@@ -24,9 +24,9 @@ Once you've installed/cloned/downloaded the Gem, run `bin/setup` to install depe
 
 ## Usage
 
-To launch _BestMusic_, simply run `bin/best-music`. The app returns live data from more than a dozen webpages, so it may take a few seconds to launch. Thanks for your patience!
+To launch *BestMusic*, simply run `bin/best-music`. The app returns live data from more than a dozen webpages, so it may take a few seconds to launch. Thanks for your patience!
 
-Once _BestMusic_ has loaded, you will have access to this week's _Best New Album_ along with a number of options for browsing the past 12 weeks' worth of _Best New Albums_. You can:
+Once *BestMusic* has loaded, you will have access to this week's _Best New Album_ along with a number of options for browsing the past 12 weeks' worth of _Best New Albums_. You can:
 
 1. Browse through a list of previous best albums by typing `list`.
 2. Explore the best albums by genre. Just type `genre`.
