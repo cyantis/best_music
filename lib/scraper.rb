@@ -32,8 +32,7 @@ class Scraper
   def self.album_description
     Album.all.each do |a|
       url = "https://pitchfork.com#{a.url}"
-      description = scrape_pitchfork(url).css(".review-detail__abstract").text.gsub(/\u0099\u0080/, "").gsub(/â(?=\Ss)/, "'")
-      a.description = description.gsub("â", "--").chomp
+      a.description = scrape_pitchfork(url).css(".review-detail__abstract").text.gsub(/\u0099\u0080/, "").gsub(/â(?=\Ss)/, "'").gsub("â", "--").chomp
     end
   end
 end
