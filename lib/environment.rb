@@ -44,7 +44,7 @@ module BestMusic
     end
 
     def album_list
-      puts "Below are the 'Best New Albums' for the past 12 weeks."
+      puts "Below are the 12 most recent 'Best New Albums.'"
       Album.all.each do |a|
         puts "*#{a.name}* by #{a.artist}".colorize(:background => :red)
         puts "It has a score of #{a.rating}".yellow
