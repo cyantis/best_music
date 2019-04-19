@@ -1,9 +1,4 @@
-require 'open-uri'
-require 'nokogiri'
-require 'pry'
-require_relative './album.rb'
-
-#album_list_url = https://pitchfork.com/reviews/best/albums/
+require_relative '../environment.rb'
 
 class Scraper
   def self.scrape_pitchfork(index_url)

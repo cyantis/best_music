@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require_relative "../lib/best_music/version"
 require_relative "../lib/environment.rb"
 
 BestMusic::CLI.new.call

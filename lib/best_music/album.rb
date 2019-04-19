@@ -1,4 +1,4 @@
-require_relative './genre.rb'
+require_relative '../environment.rb'
 
 class Album
   attr_accessor :name, :artist, :genre, :url, :rating, :description
