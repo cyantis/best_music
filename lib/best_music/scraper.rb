@@ -9,7 +9,7 @@ class Scraper
     a_list = scrape_pitchfork(index_url).css(".fragment-list").css(".review")
     a_list.each do |a|
       album = a.css(".review__title-album").text
-      artist = a.css("li")[0].text.gsub("Ã", "ü").gsub("¼", "")
+      artist = a.css("li")[0].text.gsub("Ã", "ü").gsub("¼", "").gsub("ü©", "é")
       genre = a.css("li")[1].text
       url = a.css("a").attr("href").value
       Genre.new(genre) if !Genre.all.collect {|g| g.name}.include?(genre)
@@ -27,7 +27,7 @@ class Scraper
   def self.album_description
     Album.all.each do |a|
       url = "https://pitchfork.com#{a.url}"
-      a.description = scrape_pitchfork(url).css(".review-detail__abstract").text.gsub(/\u0099\u0080/, "").gsub(/â(?=\Ss)/, "'").gsub("â", "--").chomp
+      a.description = scrape_pitchfork(url).css(".review-detail__abstract").text.gsub(/\u0099\u0080/, "").gsub(/â(?=\Ss)/, "'").gsub("â", "--").gsub("Ã©", "é").chomp
     end
   end
 end
