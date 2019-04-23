@@ -2,7 +2,7 @@ require_relative '../environment.rb'
 
 class Scraper
   def self.scrape_pitchfork(index_url)
-      index = Nokogiri::HTML(open(index_url))
+    index = Nokogiri::HTML(open(index_url))
   end
 
   def self.album_list(index_url)
