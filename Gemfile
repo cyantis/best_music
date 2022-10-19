@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem 'pry'
-gem 'nokogiri', '~> 1.10.4'
+gem 'nokogiri', '~> 1.13.9'
 gem 'colorize'
 
 #git_source(:github) {|| "https://github.com/#{repo_name}" }
